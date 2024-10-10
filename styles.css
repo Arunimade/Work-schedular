@@ -1,0 +1,85 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+.calendar {
+    margin-top: 20px;
+}
+
+.input-section {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.input-section input,
+.input-section select,
+.input-section button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.input-section input[type="color"] {
+    padding: 5px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#addTaskButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.event-details {
+    margin-top: 20px;
+    display: none;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.event-details h3 {
+    color: #007bff;
+}
+
+.event-details button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    margin-top: 10px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .input-section {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- FullCalendar CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+    <title>Work Scheduler - Task Management</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Work Scheduler</h1>
+
+        <!-- Process Scheduling: Calendar simulates scheduling tasks like an OS scheduler -->
+        <div class="calendar" id="calendar"></div>
+
+        <!-- Input Section for Task Entry (Task as Process) -->
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Enter a task..." />
+            <input type="time" id="timeInput" />
+            <input type="date" id="dateInput" value="" />
+
+            <!-- Resource Allocation: Select emoji representing task types, like processes in an OS -->
+            <select id="prioritySelect">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+
+            <!-- Emoji and Color as Resources -->
+            <select id="emojiSelect">
+                <option value="">Select Emoji</option>
+                <option value="📝">📝 Note</option>
+                <option value="📅">📅 Event</option>
+                <option value="✅">✅ Done</option>
+                <option value="🛠️">🛠️ Work</option>
+                <option value="💡">💡 Idea</option>
+            </select>
+            <input type="color" id="colorInput" value="#007bff" />
+
+            <!-- Add Task Button as Process Creation -->
+            <button id="addTaskButton">Add Task</button>
+        </div>
+
+        <!-- Detailed View for Selected Date -->
+        <div class="event-details" id="eventDetails">
+            <h3>Event Details</h3>
+            <div id="eventList"></div>
+            <button id="closeDetails">Close</button>
+        </div>
+    </div>
+
+    <!-- FullCalendar JS -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <script src="script.js"></script>
+</body>
+</html>
